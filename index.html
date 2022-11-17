@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo | Frontend Mentor</title>
+        <link rel="stylesheet" href="/style.css" />
+        <script src="/main.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- start header -->
+        <header class="card">
+            <h1>TODO</h1>
+            <button class="theme-switch">
+                <img
+                    src="/todo-app-main/images/icon-moon.svg"
+                    alt="icon-moon"
+                />
+            </button>
+        </header>
+        <!-- end header -->
+
+        <!-- < !-- start main -->
+        <main>
+            <!-- form start -->
+            <form id="FORM" class="card add">
+                <button
+                    aria-label="Add button"
+                    id=""
+                    class="cb-container"
+                    type="submit"
+                >
+                    <span class="cb--input">+</span>
+                </button>
+                <!-- txt-container start -->
+                <input
+                    class="main-input txt-container"
+                    placeholder="Create a new todo..."
+                    aria-label="Create a new todo..."
+                    type="text"
+                />
+                <!-- form end -->
+            </form>
+            <div class="container"></div>
+            <ul id="LIST" class="todos"></ul>
+            <div class="card stats">
+                <span id="COUNTER">4 items left</span>
+                <div class="filter">
+                    <!-- filters start -->
+                    <button class="" id="ALL">All</button>
+                    <button class="" id="ACTIVE">Active</button>
+                    <button class="" id="COMPLETED">Completed</button>
+                    <!-- filters end -->
+                </div>
+                <div class="corner">
+                    <button id="CLEAR">Clear Completed</button>
+                </div>
+                <!-- stats end -->
+            </div>
+        </main>
+        <!-- end main -->
+        <template id="CONTENT">
+            <li class="card">
+                <label class="cb-container">
+                    <input id="" type="checkbox" class="cb-input" />
+                    <span class="check"></span>
+                    <!-- - cb-container end -->
+                </label>
+                <!-- text start -->
+                <p class="item">Test</p>
+                <!-- end text -->
+
+                <!-- ex icon button -->
+                <button>
+                    <img
+                        src="/todo-app-main/images/icon-cross.svg"
+                        alt="icon"
+                    />
+                    <!-- ex icon button end -->
+                </button>
+
+                <!-- end li -->
+            </li>
+        </template>
+    </body>
+</html>

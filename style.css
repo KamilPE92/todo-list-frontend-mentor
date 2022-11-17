@@ -1,0 +1,252 @@
+/***********************
+ * DEFAULT REST SECTION *
+ **********************/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*************
+ * VARIABLES *
+ *************/
+
+:root {
+    /* ### Primary  */
+    --BrightBlue: hsl(220, 98%, 61%);
+    --bg: rgb(250, 250, 250);
+    --fs: 1.6rem;
+    --fs-bold: 700;
+    --fs-normal: 400;
+    --img-bg: url(/todo-app-main/images/bg-desktop-light.jpg);
+    --mainApp: hsl(0, 0%, 98%);
+    --appShadow: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --font--color: hsl(236, 9%, 61%);
+    --hover: hsl(235, 19%, 35%);
+    --green: hsl(192, 100%, 67%);
+    --pink: hsl(280, 87%, 65%);
+
+    /* Dark Theme Colors */
+
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBlue: (hover): hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+
+
+
+html {
+    font-size: 62.5%;
+    position: relative;
+}
+
+img {
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+
+body {
+    font-size: var(--fs);
+    color: var(--font--color);
+    font-weight: var(--fs-normal);
+    font-family: 'Josefin Sans', sans-serif;
+    background: var(--bg) var(--img-bg) no-repeat 0% 0% /100vw 30rem;
+
+    width: min(85%, 54rem);
+    margin: auto;
+}
+
+button,
+input {
+    font: inherit;
+    border: 0;
+    background: transparent;
+}
+
+button:focus,
+input:focus {
+    outline: 0;
+}
+
+input button {
+    display: flex;
+    user-select: none;
+}
+
+.card {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.9rem 2rem;
+    gap: 2rem;
+
+}
+
+/****************
+ * HEADER SECTION *
+ ****************/
+
+header.card {
+    background: transparent;
+    align-items: flex-start;
+    padding: 0;
+    margin: 2rem 0;
+
+}
+
+
+header,
+.card h1 {
+    color: var(--bg);
+    letter-spacing: 1rem;
+    font-size: calc(var(--fs)*2);
+    font-weight: var(--fs-bold);
+}
+
+.add {
+    margin: 4rem 0 2.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.add .cb-container #ADD_BTN {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-normal);
+    color: var(--font--color);
+
+}
+
+.add .txt-container {
+    flex: 1;
+
+}
+
+/****************
+ * CARD SECTION *
+ ****************/
+
+.card .cb-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: solid 0.1rem var(--font--color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.card .cb-container .cb-input {
+    transform: scale(1.8);
+    opacity: 0;
+}
+
+.card .cb-container .check {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.card .cb-container .cb-input:checked+.check {
+    background: url(/todo-app-main/images/icon-check.svg), linear-gradient(45deg, var(--green), var(--pink));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.item {
+    flex: 1;
+}
+
+li {
+    border-bottom: solid 0.1rem var(--font--color);
+
+}
+
+/*****************
+ * STATS SECTION *
+ *****************/
+.stats {
+    border-radius: 0 0 0.5rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border-top: solid 0.1rem var(--font--color); */
+    border-bottom: none;
+    font-weight: var(--fs-bold);
+    font-size: calc(var(--fs - 0.3rem));
+    opacity: 0.9;
+
+}
+
+.stats button {
+    color: var(--font--color);
+}
+
+.stats button:hover {
+    color: var(--hover);
+}
+
+button.active {
+    color: var(--BrightBlue);
+}
+
+
+
+
+.stats .filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter button {
+    padding: 0 0.3rem;
+    opacity: 0.8;
+}
+
+
+#CLEAR,
+#COUNTER {
+    opacity: 0.8;
+}
+
+.stats .corner:last-child {
+    justify-self: end;
+}
