@@ -6,7 +6,6 @@
 // todoDrag & Drop?
 // todoResponsive RWD
 // todo Make notes with conclusions
-// todoUnicorn filmeftgedg
 
 // todoGithub
 
