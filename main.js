@@ -58,6 +58,7 @@ form.addEventListener("submit", function (e) {
     HelperCreateTask();
     taskCounter();
     setLocalStorage();
+    taskInputClear();
 });
 
 function renderTask() {
@@ -82,6 +83,7 @@ function renderTask() {
         }
         list.appendChild(singleTask);
     });
+    // end of renderTask
 
     /********************************************
      * FUNCTIONS FOR INDIVIDUAL FEATURES TODOPP *
@@ -95,8 +97,6 @@ function renderTask() {
             element.removeChild(element.firstChild);
         }
     }
-
-    // end of renderTask
 }
 function taskDelete(e) {
     if (e.target.tagName === "IMG") {
@@ -239,6 +239,11 @@ function setLocalStorage() {
 }
 
 // setLocalStorage end0
+
+function taskInputClear() {
+    mainInput.value = "";
+}
+// taskInputClear end
 
 //Render Task for 1st time ever
 renderTask();
