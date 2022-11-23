@@ -21,31 +21,37 @@
 
 :root {
     /* ### Primary  */
-    --BrightBlue: hsl(220, 98%, 61%);
-    --bg: rgb(250, 250, 250);
+    --BrightBlue: #3a7bfd;
+    --bg: #fafafa;
     --fs: 1.6rem;
     --fs-bold: 700;
     --fs-normal: 400;
-    --img-bg: url(/todo-app-main/images/bg-desktop-light.jpg);
-    --mainApp: hsl(0, 0%, 98%);
-    --appShadow: hsl(236, 33%, 92%);
+    --img-bg: url(/images/bg-desktop-light.jpg);
+    --icon-switch: url(/images/icon-moon.svg);
+    --img-bg-mobile: url(/images/bg-desktop-light.jpg);
+    --mainApp: rgb(250, 250, 250);
+    --appShadow: #e4e5f1;
     --LightGrayishBlue: hsl(233, 11%, 84%);
     --font--color: hsl(236, 9%, 61%);
     --hover: hsl(235, 19%, 35%);
     --green: hsl(192, 100%, 67%);
     --pink: hsl(280, 87%, 65%);
 
-    /* Dark Theme Colors */
+}
 
-    --VeryDarkBlue: hsl(235, 21%, 11%);
-    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
-    --LightGrayishBlue: hsl(234, 39%, 85%);
+.dark {
+    /* Dark Theme Colors */
+    --icon-switch: url(/images/icon-sun.svg);
+    --img-bg: url(/images/bg-mobile-dark.jpg);
+    --img-bg-mobile: url(/images/bg-desktop-dark.jpg);
+    --VeryDarkBlue: #161722;
+    --VeryDarkDesaturatedBlue: #25273c;
+    --LightGrayishBlue: #cacde8;
     --LightGrayishBlue: (hover): hsl(236, 33%, 92%);
-    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --DarkGrayishBlue: #777a92;
     --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
     --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
 }
-
 
 
 
@@ -85,6 +91,7 @@ input {
     font: inherit;
     border: 0;
     background: transparent;
+    color: var(--font--color);
 }
 
 button:focus,
@@ -204,49 +211,3 @@ li {
 /*****************
  * STATS SECTION *
  *****************/
-.stats {
-    border-radius: 0 0 0.5rem 0.5rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* border-top: solid 0.1rem var(--font--color); */
-    border-bottom: none;
-    font-weight: var(--fs-bold);
-    font-size: calc(var(--fs - 0.3rem));
-    opacity: 0.9;
-
-}
-
-.stats button {
-    color: var(--font--color);
-}
-
-.stats button:hover {
-    color: var(--hover);
-}
-
-button.active {
-    color: var(--BrightBlue);
-}
-
-
-
-
-.stats .filter {
-    display: flex;
-    justify-content: space-between;
-}
-
-.filter button {
-    padding: 0 0.3rem;
-    opacity: 0.8;
-}
-
-
-#CLEAR,
-#COUNTER {
-    opacity: 0.8;
-}
-
-.stats .corner:last-child {
-    justify-self: end;
-}
