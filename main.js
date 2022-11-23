@@ -1,7 +1,6 @@
 // TODO
-// todoDark Mode (Separate File)
-// todoDrag & Drop?
 // todoResponsive RWD
+// todoDrag & Drop?
 // todo Make notes with conclusions
 
 // todoGithub
