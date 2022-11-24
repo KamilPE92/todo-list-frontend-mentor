@@ -16,13 +16,15 @@
         />
     </head>
     <body>
+        <!-- !start container -->
         <div class="container">
             <!-- !start header -->
-            <header class="card">
-                <h1>TODO</h1>
-                <button class="theme-switch">
-                    <img src="/images/icon-moon.svg" alt="Toggle Mode icon" />
-                </button>
+            <header class="header">
+                <h1 aria-label="TODO">TODO</h1>
+                <button
+                    aria-label="Toggle DarkMode"
+                    class="theme__switcher"
+                ></button>
             </header>
             <!-- !end header -->
 
@@ -47,7 +49,6 @@
                     />
                     <!-- !form end -->
                 </form>
-                <div class="container"></div>
                 <ul id="LIST" class="todos"></ul>
             </main>
             <!-- !end main -->
@@ -55,8 +56,8 @@
             <!-- !filters start -->
             <div class="filters">
                 <div class="filters__aside">
-                    <button id="CLEAR"></button>
                     <span id="COUNTER"></span>
+                    <button id="CLEAR">Clear Completed</button>
                 </div>
                 <div class="filters_center">
                     <button id="ALL">All</button>
@@ -66,7 +67,18 @@
                 </div>
                 <!-- !filters end -->
             </div>
-
+            <footer>
+                <div class="attributions">
+                    <a
+                        target="_blank"
+                        href="https://github.com/KamilPE92"
+                        alt="Coded by me-link to my Github Profile"
+                    >
+                        Coded by K.P(Dev);
+                    </a>
+                </div>
+                <!-- !end footer -->
+            </footer>
             <template id="CONTENT">
                 <li class="card">
                     <label class="cb-container">
@@ -92,3 +104,9 @@
         </div>
     </body>
 </html>
+
+<!-- *Quote Erat Demonstrandum
+ It's Done
+ Zrobione.
+ Coded by K.P(Dev);
+Current Date: 24.11.2022  -->

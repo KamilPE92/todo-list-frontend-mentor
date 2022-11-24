@@ -1,10 +1,3 @@
-// TODO
-// todoResponsive RWD
-// todoDrag & Drop?
-// todo Make notes with conclusions
-
-// todoGithub
-
 /*************************
  * CAPTURE HTML ELEMENTS *
  *************************/
@@ -256,3 +249,9 @@ list.addEventListener("click", taskDelete);
 list.addEventListener("click", taskCheck);
 clearBTN.addEventListener("click", clearCompleted);
 filters.addEventListener("click", filtersHelper);
+
+/* *Quote Erat Demonstrandum
+ It's Done
+ Zrobione.
+ Coded by K.P(Dev);
+Current Date: 24.11.2022 */

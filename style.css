@@ -29,7 +29,7 @@
     --img-bg: url(/images/bg-desktop-light.jpg);
     --icon-switch: url(/images/icon-moon.svg);
     --img-bg-mobile: url(/images/bg-desktop-light.jpg);
-    --mainApp: rgb(250, 250, 250);
+    --mainApp: #fafafa;
     --appShadow: #e4e5f1;
     --LightGrayishBlue: hsl(233, 11%, 84%);
     --font--color: hsl(236, 9%, 61%);
@@ -41,11 +41,12 @@
 
 .dark {
     /* Dark Theme Colors */
+    --bg: #171823;
     --icon-switch: url(/images/icon-sun.svg);
     --img-bg: url(/images/bg-mobile-dark.jpg);
     --img-bg-mobile: url(/images/bg-desktop-dark.jpg);
     --VeryDarkBlue: #161722;
-    --VeryDarkDesaturatedBlue: #25273c;
+    --mainApp: #25273c;
     --LightGrayishBlue: #cacde8;
     --LightGrayishBlue: (hover): hsl(236, 33%, 92%);
     --DarkGrayishBlue: #777a92;
@@ -53,8 +54,9 @@
     --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
 }
 
-
-
+/******************************
+ * RESET AND GENERAL STYLING *
+ ******************************/
 html {
     font-size: 62.5%;
     position: relative;
@@ -86,6 +88,27 @@ body {
     margin: auto;
 }
 
+body .dark {
+    background: var(--bg) var(--img-bg) no-repeat 0% 0% /100vw 30rem;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.dark .card {
+    background-color: var(--mainApp);
+}
+
+.dark .filters__aside {
+    background-color: var(--mainApp);
+
+}
+
+/************************
+ * GENERAL BUTTON STYLE *
+ ************************/
+button:hover {
+    color: var(--hover);
+}
+
 button,
 input {
     font: inherit;
@@ -104,21 +127,14 @@ input button {
     user-select: none;
 }
 
-.card {
-    background-color: var(--bg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.9rem 2rem;
-    gap: 2rem;
-
-}
 
 /****************
- * HEADER SECTION *
- ****************/
+* HEADER SECTION *
+****************/
 
-header.card {
+.header {
+    display: flex;
+    justify-content: space-between;
     background: transparent;
     align-items: flex-start;
     padding: 0;
@@ -127,13 +143,28 @@ header.card {
 }
 
 
+.dark .header {
+    background: transparent;
+}
+
 header,
-.card h1 {
-    color: var(--bg);
+.header h1 {
+    color: #fafafa;
     letter-spacing: 1rem;
     font-size: calc(var(--fs)*2);
     font-weight: var(--fs-bold);
+
 }
+
+.theme__switcher {
+    background: var(--icon-switch) no-repeat;
+    background-size: cover;
+    padding: 1.3rem;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem
+}
+
 
 .add {
     margin: 4rem 0 2.5rem 0;
@@ -155,9 +186,20 @@ header,
 
 }
 
+
+
 /****************
  * CARD SECTION *
  ****************/
+.card {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.9rem 2rem;
+    gap: 2rem;
+
+}
 
 .card .cb-container {
     width: 2.5rem;
@@ -211,3 +253,98 @@ li {
 /*****************
  * STATS SECTION *
  *****************/
+.filters_center .active {
+    color: var(--BrightBlue);
+}
+
+.filters__aside {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 100%;
+    border-bottom: var(--mainApp);
+    border-left: 1px solid var(--bg);
+    border-right: 1px solid var(--bg);
+    padding: 2.4rem 2.4rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.filters_center {
+    background: var(--mainApp);
+    display: inline-block;
+    padding: 1.9rem 2.4rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-bottom: 1px solid var(--bg);
+    border-radius: 5px;
+}
+
+/**********
+ * FOOTER *
+ **********/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attributions a {
+    color: var(--BrightBlue);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* @MEDIA SECTION */
+
+@media(max-width:738px) {
+    html {
+        font-size: 40%;
+    }
+
+
+
+    .dark body {
+        background: var(--img-bg-mobile) no-repeat;
+    }
+
+    .container {
+        background: var(--img-bg-mobile) no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    .filters_center {
+        background: var(--mainApp);
+        position: static;
+        display: block;
+        transform: none;
+        text-align: center;
+        margin-top: 1rem;
+        border: 1px solid var(--bg);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .filters_center button {
+        padding: 0 1rem;
+    }
+
+    footer {
+        background: transparent;
+        margin: 4rem 0;
+        padding: 1rem;
+    }
+}
+
+
+
+/* *Quote Erat Demonstrandum
+ It's Done
+ Zrobione.
+ Coded by K.P(Dev);
+Current Date: 24.11.2022 */
